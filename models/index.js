@@ -2,5 +2,6 @@
 
 module.exports = {
     Cardio: require("./Cardio"),
-    Resistance: require("./Resistance")
+    Resistance: require("./Resistance"),
+    User: require("./User")
   };
