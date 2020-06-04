@@ -1,7 +1,7 @@
 // Exporting an object containing all of our models
 
 module.exports = {
-    Cardio: require("./Cardio"),
-    Resistance: require("./Resistance"),
-    User: require("./User")
+    Exercise: require("./Excercise"),
+    Workout: require("./Workout"),
+    
   };
