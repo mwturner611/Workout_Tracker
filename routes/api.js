@@ -1,17 +1,11 @@
 const router = require("express").Router();
 const db = require("../models");
 
-// db.Workout.create({name: "first Workout"})
-// .then(dbWorkout => {
-//     console.log(dbWorkout);
-// })
-// .catch(({message}) => {
-//     console.log(message);
-// });
-
+// route doesn't send to workout.js the summary object it needs
 router.get("/api/workouts", (req,res) => {
-    db.Exercise.find({})
-    .then(dbWorkouts => {
+    db.Workout.find({})
+    .then(dbWorkouts => {     
+        console.log(dbWorkouts);   
         res.json(dbWorkouts);
     })
     .catch(err => {
@@ -20,8 +14,7 @@ router.get("/api/workouts", (req,res) => {
 })
 
 router.get("/api/workouts/range", (req,res) => {
-    db.Exercise.find({})
-    .sort({duration: -1})
+    db.Workout.find({})
     .then(dbWorkout => {
         res.json(dbWorkout);
     })
